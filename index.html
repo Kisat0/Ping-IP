@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Zenetys</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <label for="url">Url</label>
+        <input type="text" name="url" id="url" placeholder="Entrez votre url..">
+        <label for="inter">Intervalle</label>
+        <input type="text" name="inter" id="inter" placeholder="Entrez votre intervalle en ms..">
+        <label for="inter">Nombre de tests</label>
+        <input type="text" name="number" id="number" placeholder="Entrez le nombre de tests..(optionnel)">
+
+        <button id="ping-button" onclick="ping()">Ping !</button>
+        <button id="stop-button">Stop !</button>
+
+        <div id="result">
+            <p>Ping: </p>
+            <p id="ping"></p>
+        </div>
+
+        <div id="test">
+            <p>test n°</p>
+            <p id="count"></p>
+        </div>
+    </div>
+
+    <div id="pop-up">
+        <p>Intervalle ou Url incorrecte !</p>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
