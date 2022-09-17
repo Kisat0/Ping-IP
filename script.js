@@ -18,9 +18,8 @@ function ping() {
         number = $('#number').val();
         if (number.length == 0) {
             number = undefined;
-        }
-        else {
-        $('#test').css("display", "flex").hide().fadeIn(500);
+        } else {
+            $('#test').css("display", "flex").hide().fadeIn(500);
         }
         $('#result').css("display", "flex").hide().fadeIn(500);
         $('#stop-button').fadeIn(500);
@@ -59,7 +58,7 @@ var request_image = function (url) {
             reject(url);
         };
         img.src = url + '?random-no-cache=' + Math.floor((1 + Math.random()) * 0x10000).toString(16);
-      
+
     });
 };
 
@@ -83,15 +82,28 @@ var pinging = function (url, multiplier) {
 
 var inputUrl = document.getElementById('url');
 var inputInter = document.getElementById('inter');
+var inputNumber = document.getElementById('number');
 var stop = document.getElementById('stop-button');
 
 inputUrl.addEventListener('click', function () {
     $('#result').css("display", "none").hide().fadeOut(500);
     $('#pop-up').fadeOut(500);
+    $('#test').fadeOut(500);
+    $('#stop-button').fadeOut(500);
+
 });
 inputInter.addEventListener('click', function () {
     $('#result').fadeOut(500);
     $('#pop-up').fadeOut(500);
+    $('#test').fadeOut(500);
+    $('#stop-button').fadeOut(500);
+
+});
+inputNumber.addEventListener('click', function () {
+    $('#result').fadeOut(500);
+    $('#pop-up').fadeOut(500);
+    $('#test').fadeOut(500);
+    $('#stop-button').fadeOut(500);
 });
 
 stop.addEventListener('click', function () {
